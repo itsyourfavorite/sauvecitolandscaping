@@ -1,0 +1,174 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(62, 154, 82, 0.2);
+  color: #111811;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid rgba(62, 154, 82, 0.4);
+  outline-offset: 2px;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #e8eae4;
+}
+
+/* Card hover transitions */
+.card-luxury,
+.card-luxury-sm {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button press effect */
+.btn-primary:active,
+.btn-outline:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Service card icon animation */
+.service-card:hover svg {
+  transform: scale(1.1);
+}
+
+/* Project card overlay */
+.project-card .overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Testimonial card quote styling */
+.testimonial-card p:first-child::before {
+  content: '"';
+  font-size: 3rem;
+  line-height: 1;
+  color: rgba(62, 154, 82, 0.3);
+  position: absolute;
+  top: -0.5rem;
+  left: 0.5rem;
+  font-family: Georgia, serif;
+}
+
+.testimonial-card {
+  position: relative;
+}
+
+/* Pricing card featured styling */
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Form input focus animation */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(62, 154, 82, 0.1);
+}
+
+/* Navigation link underline effect */
+nav button {
+  position: relative;
+}
+
+nav button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3E9A52;
+  transition: width 0.3s ease;
+}
+
+nav button:hover::after {
+  width: 100%;
+}
+
+/* Mobile menu animation */
+@media (max-width: 1023px) {
+  nav .lg\\:hidden {
+    animation: slideDown 0.3s ease-out;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Process step number styling */
+.process-step span:first-child {
+  line-height: 1;
+}
+
+/* Hero text shadow for readability */
+.hero-headline span {
+  text-shadow: 0 2px 20px rgba(246, 247, 243, 0.8);
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 640px) {
+  .hero-headline {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0.7;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6F7F3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6B746B;
+  border-radius: 5px;
+  border: 2px solid #F6F7F3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3E9A52;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6B746B #F6F7F3;
+}
